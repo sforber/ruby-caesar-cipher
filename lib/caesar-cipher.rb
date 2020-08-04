@@ -1,5 +1,3 @@
-STDOUT.sync = true
-
 def createAlphabet()
     alphabet = ("a".."z").to_a
     character_hash = Hash.new
@@ -31,14 +29,9 @@ def caesarCipher(message, shift)
             encryptedMessage.push(char)            
         end
     end
-    puts encryptedMessage.join("")
+    return encryptedMessage.join("")
 end
 
-puts ("Enter a message: ")
-message = gets.chomp
-puts ("Enter the shift amount: ")
-shift = gets.chomp.to_i
 
-caesarCipher(message, shift)
 
 
